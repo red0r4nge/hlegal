@@ -1,0 +1,155 @@
+.info__container {
+  #info__toggle {
+    @media (min-width: $mobile) {
+      display: none;
+    }
+
+    &:checked~.info__group {
+      @media (min-width: $mobile) {
+        @include setFlexbox (column, flex-start, flex-start, nowrap);
+        opacity: 1;
+      }
+
+      @media (min-width: $tabhd) {
+        @include setFlexbox (row, flex-start, flex-start, nowrap);
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      @media (min-width: $desktop) {
+        width: 81.81%;
+      }
+
+      @media (min-width: $desksd) {
+        width: 85%;
+      }
+    }
+  }
+
+  .info__toggle {
+    @media (min-width: $mobile) {
+      display: block;
+      position: relative;
+      z-index: 2;
+      @include setDimensions (42px, 42px, 0);
+      margin: 0 auto 60px;
+      text-decoration: none;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background: url(../img/scroll.svg) no-repeat;
+      background-size: cover;
+      transition: .3s;
+
+      &:hover {
+        background: url(../img/scrollhover.svg) no-repeat;
+      }
+    }
+
+    @media (min-width: $tabsd) {
+      margin-bottom: 90px;
+    }
+  }
+
+  .info__group {
+    @media (min-width: $mobile) {
+      display: none;
+      opacity: 0;
+    }
+
+    .info__item {
+      @media (max-width: 1023px) {
+        @include setFlexbox (row, flex-start, flex-start, nowrap);
+        overflow-x: auto;
+        width: 100%;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      @media (min-width: $tabhd) {
+        @include setFlexbox (column, space-around, flex-end, nowrap);
+        @include setDimensions (375px, 303px, 0)
+      }
+
+      .info__title {
+        @media (min-width: $mobile) {
+          @include setFont (30px, 37px, #B3B3BA, 700);
+          display: inline-block;
+          margin-right: 30px;
+          
+          &:hover {
+            background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+        }
+
+        @media (min-width: $tabsd) {
+          @include setFont (38px, 46px, #B3B3BA, 700);
+        }
+
+        @media (min-width: $tabhd) {
+          display: inline;
+          margin: 0;
+        }
+      }
+    }
+
+    .info__item-primary {
+      @media (min-width: $mobile) {
+        @include setDimensions (100%, 4px, 0);
+        background: rgba(255, 255, 255, 0.3);
+        margin: 30px 0;
+      }
+
+      @media (min-width: $tabsd) {
+        margin: 60px 0;
+      }
+
+      @media (min-width: $tabhd) {
+        margin: 0 60px;
+        @include setDimensions (0px, 303px, 0);
+        padding: 0 2px;
+      }
+    }
+
+    .info__item-secondary {
+      @media (min-width: $tabhd) {
+        @include setFlexbox (column, center, flex-start, nowrap);
+        @include setDimensions (45%, 303px, 0)
+      }
+
+      @media (min-width: $desktop) {
+        width: 54%;
+      }
+
+      @media (min-width: $deskhd) {
+        width: 65%;
+      }
+
+      .info__headline {
+        @media (min-width: $mobile) {
+          @include setFont (20px, 24px, #ffffff, 700);
+          margin-bottom: 30px;
+        }
+
+        @media (min-width: $tabsd) {
+          @include setFont (30px, 37px, #ffffff, 700);
+        }
+      }
+
+      .info__text {
+        @media (min-width: $mobile) {
+          @include setFont (19px, 30px, #ffffff, 400);
+        }
+      }
+    }
+  }
+}

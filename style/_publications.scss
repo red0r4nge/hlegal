@@ -1,0 +1,118 @@
+.publications {
+  @media (min-width: $mobile) {
+    padding: 30px 0;
+    border-bottom: 2px solid #E6E6F0;
+  }
+
+  .publications__link {
+    @media (min-width: $mobile) {
+      @include setLink;
+
+    }
+
+    @media (min-width: $tabsd) {}
+
+  }
+
+  .publications__headline {
+    @media (min-width: $mobile) {
+      @include setFontgrad;
+      margin-top: 5px;
+    }
+
+    @media (min-width: $tabsd) {
+      @include setFontgradbig;
+      margin-top: 10px;
+    }
+  }
+
+  .publications__container {
+    @media (min-width: $mobile) {
+      width: 100%;
+      @include setFlexbox (column, flex-start, flex-start, nowrap);
+    }
+
+    @media (min-width: $tabsd) {
+      @include setFlexbox (row, space-between, stretch, wrap);
+    }
+
+    @media (min-width: $tabhd) {
+      flex-wrap: nowrap;
+    }
+
+
+    .publications__item {
+      @media (min-width: $mobile) {
+        display: block;
+        @include setWrapper (100%, 30px 0 0, 0);
+        background: #FFFFFF;
+        border-radius: 8px;
+      }
+
+      @media (min-width: $tabsd) {
+        width: 47.68%;
+      }
+
+      @media (min-width: $tabhd) {
+        width: 31.12%;
+      }
+
+      @media (min-width: $desksd) {
+        width: 31.81%;
+      }
+
+      @media (min-width: $deskhd) {
+        width: 32.08%;
+      }
+
+      .publications__img {
+        @media (min-width: $mobile) {
+          @include setDimensions (100%, 200px, 8px 8px 0 0);
+          object-fit: cover;
+        }
+      }
+
+      .pubications__content {
+        @media (min-width: $mobile) {
+          padding: 30px;
+        }
+
+        .publications__title {
+          @media (min-width: $mobile) {
+            @include setFont (16px, 20px, #24A3FF, 700);
+          }
+        }
+
+        .publications__date {
+          @media (min-width: $mobile) {
+            margin-top: 15px;
+            @include setFont (12px, 15px, #B3B3BA, 700);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            &::after {
+              content: "";
+              display: block;
+              @include setDimensions (100%, 4px, 0);
+              margin: 15px 0;
+              background: #E6E6F0;
+            }
+          }
+        }
+
+        .publications__text {
+          @media (min-width: $mobile) {
+            @include setFont (14px, 22px, #000, 400);
+          }
+        }
+      }
+    }
+
+    .publications__item--primary {
+      @media (min-width: $tabsd) and (max-width: 1023px) {
+        @include setWrapper (100%, 30px 0 0, 0);
+      }
+    }
+  }
+
+}

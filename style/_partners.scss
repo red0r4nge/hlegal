@@ -1,0 +1,119 @@
+.wrapper__partners {
+  @media (min-width: $deskhd) {
+    @include setWrapper (89.5%, 0 auto, 0);
+  }
+
+
+  .partners__headline {
+    @media (min-width: $mobile) {
+      @include setFont (14px, 17px, #323264, 700);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  .partners__group {
+    @media (min-width: $mobile) {
+      @include setFlexbox (column, flex-start, flex-start, nowrap);
+    }
+
+    @media (min-width: $tabsd) {
+      @include setFlexbox (row, flex-start, flex-start, wrap);
+    }
+
+    .partners__item {
+      @media (min-width: $mobile) {
+        @include setFlexbox (row, center, center, wrap);
+        @include setDimensions (100%, 120px, 0);
+      }
+
+      @media (min-width: $tabsd) {
+        width: calc(100%/3);
+      }
+
+      @media (min-width: $tabhd) {
+        width: 25%;
+      }
+    }
+
+    .partners__item--primary {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    #hillel {
+      @media (min-width: $mobile) {
+        background: #1C4280
+      }
+    }
+
+    #wannabiz {
+      @media (min-width: $mobile) {
+        background: #143646;
+      }
+    }
+
+    #tapgerine {
+      @media (min-width: $mobile) {
+        background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+      }
+    }
+
+    #threedlook {
+      @media (min-width: $mobile) {
+        background: #9E4DC3;
+      }
+    }
+
+    #orangear {
+      @media (min-width: $mobile) {
+        background: #FD9339;
+      }
+    }
+
+    #adtel {
+      @media (min-width: $mobile) {
+        background: #E2E2E4;
+      }
+    }
+
+    #clickky {
+      @media (min-width: $mobile) {
+        background: #C71C36;
+      }
+    }
+
+    #ecolease {
+      @media (min-width: $mobile) {
+        background: #DCF3F9;
+      }
+    }
+
+    #infratek {
+      @media (min-width: $mobile) {
+        background: #EAEAEA;
+      }
+    }
+
+    #citypark {
+      @media (min-width: $mobile) {
+        background: #282240;
+      }
+    }
+
+    #artprint {
+      @media (min-width: $mobile) {
+        background: #1D4568;
+      }
+    }
+
+    #ucard {
+      @media (min-width: $mobile) {
+        background: #000000;
+      }
+    }
+  }
+}

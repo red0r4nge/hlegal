@@ -1,0 +1,111 @@
+.wrapper__header {
+  .nav {
+    .logo {
+      #redslash {
+        @media (max-width: 767px) {
+          @include setDimensions (11.62px, 26px, 0)
+        }
+
+        @media (min-width: $tabsd) {
+          margin: 0 4px;
+          display: inline-block;
+        }
+      }
+
+      .logo__text {
+        @media (min-width: $mobile) {
+          @include setFont(20px, 24px, #323264, 400);
+        }
+
+        @media (min-width: $tabsd) {
+          @include setFont(36px, 44px, #323264, 400);
+          display: block;
+        }
+      }
+    }
+
+    .nav__group {
+      @media (min-width: $mobile) {
+        background: #F5F5FA;
+      }
+
+      @media (min-width: $tabsd) {
+        background: none;
+      }
+
+      .lang {
+        .lang__link {
+          @media (min-width: $mobile) {
+            @include setFont(12px, 15px, #B3B3BA, 700);
+
+            &:hover {
+              background: #F5F5FA;
+            }
+          }
+        }
+
+        .lang__link--active {
+          @media (min-width: $mobile) {
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      #phone {
+        @media (min-width: $mobile) {
+          color: #B3B3BA;
+        }
+      }
+
+      #fb {
+        @media (min-width: $mobile) {
+          display: none;
+        }
+
+        @media (min-width: $tabsd) {
+          display: inline-block;
+          background: url(../img/fbgrey.svg) no-repeat;
+
+          &:hover {
+            background: url(../img/fbhover.svg) no-repeat;
+          }
+        }
+      }
+    }
+
+    .container__menu {
+      .menu {
+        .menu__item {
+          .menu__link {
+            @media (min-width: $tabsd) {
+              color: #24A3FF;
+
+              &:hover {
+                -webkit-box-shadow: inset 0px -3px 0px 0px #24A3FF;
+                box-shadow: inset 0px -2px 0px 0px #24A3FF;
+              }
+            }
+          }
+
+          .menu__link--onpage {
+            @media (min-width: $tabsd) {
+              color: #F0145A;
+              -webkit-box-shadow: inset 0px -2px 0px 0px #F0145A;
+              box-shadow: inset 0px -2px 0px 0px #F0145A;
+            }
+          }
+        }
+      }
+
+      .toggle {
+        @media (min-width: $mobile) {
+          background-image: url(../img/burgerblue.svg);
+
+          &:active {
+            background-image: url(../img/burgeractive.svg);
+          }
+        }
+      }
+    }
+  }
+}

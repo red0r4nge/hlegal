@@ -1,0 +1,91 @@
+@import 'mixin';
+@import 'reset';
+
+$mobile: 375px;
+$tabsd: 768px;
+$tabhd: 1024px;
+$desktop: 1280px;
+$desksd: 1440px;
+$deskhd: 1920px;
+
+.container__gradient {
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-radius: 0px 0px 12px 12px;
+}
+
+.wrapper {
+  @media (min-width: $mobile) {
+    @include setWrapper (84%, 0 auto, 0);
+  }
+
+  @media (min-width: $tabsd) {
+    width: 84.375%;
+  }
+
+  @media (min-width: $tabhd) {
+    width: 88.28125%;
+  }
+
+  @media (min-width: $desksd) {
+    width: 91.6%;
+  }
+
+  @media (min-width: $deskhd) {
+    width: 83.3%;
+  }
+}
+
+//First page
+
+.header {
+  @import 'header';
+}
+
+.main {
+  @import 'info';
+  @import 'services';
+}
+
+.block {
+  @include setWrapper (auto, 0 20px, 5px 0);
+  background: #CACADB;
+  border-radius: 0px 0px 12px 12px;
+}
+
+.block--primary {
+  @include setWrapper (auto, 0 40px, 5px 0);
+  background: #E7E7F2;
+}
+
+@import 'team';
+@import 'partners';
+
+.container__background {
+  background: #F5F5FA;
+}
+
+@import 'publications';
+
+.footer {
+  @import 'ref';
+}
+
+//End of first page
+
+//Second page
+#teamentry {
+  .header {
+    @import 'header';
+    @import 'headerwhite';
+  }
+
+  .main {
+    @import 'crew';
+  }
+
+  .footer {
+    @import 'ref';
+  }
+}
+
+//End of second page

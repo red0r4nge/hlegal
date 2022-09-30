@@ -1,0 +1,122 @@
+.reference {
+  @media (min-width: $mobile) {
+    padding: 30px 0;
+    @include setFlexbox (column, start, center, nowrap);
+  }
+
+  @media (min-width: $tabsd) {
+    @include setFlexbox (row, space-between, start, wrap);
+  }
+
+  .reference__map {
+    @media (min-width: $mobile) {
+      @include setFlexbox (column, start, center, nowrap);
+      margin-bottom: 21px;
+      order: -1;
+    }
+
+    @media (min-width: $tabsd) {
+      flex-direction: row;
+      order: 0;
+    }
+
+
+
+    .map__text {
+      @media (min-width: $mobile) {
+        @include setFlexbox (row, start, center, nowrap);
+        @include setFont(16px, 20px, #323264, 400);
+        margin-bottom: 10px;
+      }
+
+      @media (min-width: $tabsd) {
+        margin: 0;
+
+        &::after {
+          content: '';
+          display: inline-block;
+          flex-shrink: 0;
+          margin: 0 10px;
+          @include setDimensions (6px, 6px, 50%);
+          background: #B3B3BA;
+        }
+      }
+    }
+
+    .map__link {
+      @media (min-width: $mobile) {
+        @include setFont(12px, 15px, #24A3FF, 700);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        &:hover {
+          color: #F0145A;
+        }
+      }
+    }
+  }
+
+  .reference__copyright {
+    @media (min-width: $mobile) {
+      @include setFont(16px, 20px, #B3B3BA, 400);
+    }
+  }
+
+  .reference__contacts {
+    @media (min-width: $mobile) {
+      @include setFlexbox (column, start, center, nowrap);
+      margin-bottom: 30px;
+      order: -1;
+    }
+
+    @media (min-width: $tabsd) {
+      @include setFlexbox (row, start, center, wrap);
+      @include setWrapper (100%, 0, 0);
+      order: 0;
+    }
+
+    #fbfooter {
+      @media (min-width: $mobile) {
+        display: inline-block;
+        @include setDimensions (38px, 38px, 50%);
+        background: url(../img/fbfooter.svg) no-repeat;
+      }
+
+    }
+
+    .reference__number {
+      @media (min-width: $mobile) {
+        @include setFont(16px, 20px, #46466E, 700);
+        margin: 10px 0;
+
+      }
+
+      @media (min-width: $tabsd) {
+        @include setFlexbox (row, start, center, nowrap);
+        margin: 0;
+
+        &::before,
+        &::after {
+          content: '';
+          display: inline-block;
+          flex-shrink: 0;
+          margin: 0 10px;
+          @include setDimensions (6px, 6px, 50%);
+          background: #B3B3BA;
+        }
+      }
+    }
+
+    .reference__mail {
+      @media (min-width: $mobile) {
+        @include setFont(16px, 20px, #24A3FF, 700);
+
+        &:hover {
+          color: #F0145A;
+        }
+      }
+    }
+  }
+
+
+}

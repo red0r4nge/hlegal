@@ -1,0 +1,176 @@
+.team__container {
+  @media (min-width: $mobile) {
+    @include setFlexbox (row, center, flex-start, wrap);
+    margin: 30px 0 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media (min-width: $tabsd) {
+    margin: 60px 0;
+  }
+
+  #dot,
+  #dot--primary,
+  #dot--secondary {
+    @media (min-width: $mobile) {
+      display: none;
+    }
+  }
+
+  #dot:checked~label[for="dot"],
+  #dot--primary:checked~label[for="dot--primary"],
+  #dot--secondary:checked~label[for="dot--secondary"] {
+    @media (min-width: $mobile) {
+      background: #24A3FF;
+    }
+  }
+
+  #dot:checked~.slider .slider__item {
+    @media (min-width: $mobile) {
+      margin-left: 0;
+    }
+
+  }
+
+  #dot--primary:checked~.slider .slider__item--primary {
+    @media (min-width: $mobile) {
+      margin-left: -100%;
+    }
+
+  }
+
+  #dot--secondary:checked~.slider .slider__item--secondary {
+    @media (min-width: $mobile) {
+      margin-left: -200%;
+    }
+  }
+
+  .dot {
+    @media (min-width: $mobile) {
+      display: inline-block;
+      @include setDimensions (16px, 16px, 50%);
+      background: rgba(36, 163, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 30px;
+    }
+  }
+
+  label[for="dot--primary"] {
+    @media (min-width: $mobile) {
+      margin: 30px 15px 0;
+    }
+
+  }
+
+  .slider {
+    @media (min-width: $mobile) {
+      display: flex;
+      @include setDimensions (100%, auto, 12px);
+      order: -7;
+    }
+
+
+    .slider__item {
+      @media (min-width: $mobile) {
+        @include setFlexbox (column, flex-start, flex-start, nowrap);
+        @include setDimensions (100%, auto, 12px);
+        background: #f5f5fa;
+        transition: all 0.3s ease;
+      }
+
+      @media (min-width: $tabhd) {
+        @include setFlexbox (row, flex-start, flex-start, nowrap);
+      }
+
+      .slider__image {
+        @media (min-width: $mobile) {
+          @include setDimensions (100%, 500px, 12px 12px 0px 0px);
+          object-fit: cover;
+        }
+
+        @media (min-width: $tabhd) {
+          @include setDimensions (44.25%, 528px, 12px 0px 0px 12px);
+        }
+
+        @media (min-width: $desktop) {
+          @include setDimensions (34.25%, 454px, 12px 0px 0px 12px);
+        }
+
+        @media (min-width: $desksd) {
+          @include setDimensions (30.30%, 344px, 12px 0px 0px 12px);
+        }
+
+        @media (min-width: $deskhd) {
+          @include setDimensions (25%, 298px, 12px 0px 0px 12px);
+        }
+      }
+
+      .slider__group {
+        @media (min-width: $mobile) {
+          @include setWrapper(81%, 0 auto, 30px 0);
+        }
+
+        @media (min-width: $tabsd) {
+          @include setWrapper(100%, 0, 30px);
+        }
+
+        @media (min-width: $tabhd) {
+          @include setFlexbox (column, space-between, flex-start, nowrap);
+          @include setDimensions (55.75%, 100%, 0)
+        }
+
+        @media (min-width: $desktop) {
+          width: 65.75%;
+        }
+
+        @media (min-width: $desksd) {
+          width: 69.7%;
+        }
+
+        @media (min-width: $deskhd) {
+          width: 75%;
+        }
+
+        .slider__group-child {
+          .slider__link {
+            @media (min-width: $mobile) {
+              @include setLink;
+            }
+          }
+
+          .slider__quote {
+            @media (min-width: $mobile) {
+              @include setFontgrad;
+              margin: 5px 0 30px;
+              word-wrap: break-word;
+            }
+
+            @media (min-width: $desksd) {
+              @include setFontgradbig;
+            }
+          }
+        }
+
+        .slider__caption {
+          .slider__subject {
+            @media (min-width: $mobile) {
+              @include setFont (16px, 20px, #B3B3BA, 700);
+              margin-bottom: 6px;
+            }
+          }
+
+          .slider__post {
+            @media (min-width: $mobile) {
+              @include setFont (14px, 22px, #B3B3BA, 400);
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+}

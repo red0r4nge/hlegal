@@ -1,0 +1,86 @@
+.services__container {
+  @media (min-width: $mobile) {
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $tabsd) {
+    margin-top: 60px;
+    padding-bottom: 0;
+  }
+
+
+
+  .services__link {
+    @media (min-width: $mobile) {
+      @include setLink;
+    }
+  }
+
+
+  .services__headline {
+    @media (min-width: $mobile) {
+      @include setFontgrad;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $tabsd) {
+      @include setFontgradbig;
+      margin-bottom: 60px;
+    }
+  }
+
+  .cards__container {
+    @media (min-width: $mobile) {
+      @include setFlexbox (column, flex-start, flex-start, nowrap);
+    }
+
+    @media (min-width: $tabsd) {
+      @include setFlexbox (row, space-between, flex-start, wrap);
+
+    }
+
+    .card__item {
+      @media (min-width: $mobile) {
+        margin-bottom: 30px;
+      }
+
+      @media (min-width: $tabsd) {
+        width: 45.37037%;
+        margin-bottom: 60px;
+      }
+
+      @media (min-width: $tabhd) {
+        width: 28.9%;
+      }
+
+      @media (min-width: $desksd) {
+        width: 30.3%;
+      }
+
+      @media (min-width: $deskhd) {
+        width: 30.83%;
+      }
+
+      .card__headline {
+        @media (min-width: $mobile) {
+          @include setFont (22px, 27px, #24A3FF, 700);
+          margin: 30px 0 15px;
+        }
+      }
+
+      .card__headline--primary {
+        @media (min-width: $desksd) {
+          width: 62%;
+        }
+      }
+
+      .card__text {
+        @media (min-width: $mobile) {
+          @include setFont (16px, 26px, #FFFFFF, 400);
+        }
+      }
+    }
+  }
+
+}

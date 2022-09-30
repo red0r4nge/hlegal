@@ -1,0 +1,74 @@
+@mixin setReset {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+@mixin setWrapper ($width, $margin, $padding) {
+  width: $width;
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin setFlexbox ($dir, $jus, $align, $wrap) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jus;
+  align-items: $align;
+  flex-wrap: $wrap;
+  flex-shrink: 0;
+}
+
+@mixin setDimensions ($w, $h, $bradius) {
+  width: $w;
+  height: $h;
+  border-radius: $bradius;
+}
+
+@mixin setFont ($size, $linehgt, $color, $fontweight) {
+  font-size: $size;
+  line-height: $linehgt;
+  color: $color;
+  font-weight: $fontweight;
+}
+
+@mixin setFontgrad {
+  @include setFont (30px, 37px, #F0145A, 700);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin setFontgradbig {
+  @include setFont (38px, 46px, #F0145A, 700);
+}
+
+@mixin setLink {
+  @include setFont (14px, 17px, #24A3FF, 700);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &:hover {
+    color: #F0145A;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      @include setDimensions (12px, 12px, 0);
+      background: url(../img/arrowhover.svg) no-repeat;
+      background-size: cover;
+      transition: .3s;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    @include setDimensions (12px, 12px, 0);
+    background: url(../img/arrow.svg) no-repeat;
+    background-size: cover;
+  }
+}
