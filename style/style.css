@@ -949,7 +949,7 @@ ul {
   .wrapper__partners .partners__group #ucard {
     background: #000000; } }
 
-.container__background {
+.container--special {
   background: #F5F5FA; }
 
 @media (min-width: 375px) {
